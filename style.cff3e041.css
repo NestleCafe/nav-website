@@ -1,0 +1,312 @@
+/*css reset*/
+*{box-sizing: border-box;}
+*:before, *:after{box-sizing: border-box;}
+*{margin: 0; padding: 0;}
+*:focus{outline: none;}
+ul, ol{list-style: none;}
+a{color: inherit; text-decoration: none;}
+img{max-width: 100%; max-height: 100%;}
+
+
+body{
+    background: #333333;
+    width: 100vw;
+    background-size:cover;
+    background-attachment:fixed;
+}
+
+.selectorWrapper{
+    margin-top: 30px;
+    margin-bottom: 0;
+    display: flex;
+    align-content: flex-start;
+    color: black;
+    margin-left: 20px;
+}
+.selectorWrapper > li{
+    display: flex;
+    cursor: default;
+}
+@media (min-width:500px){
+    .selectorWrapper{
+        margin-top: 130px;
+        max-width: 500px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+.selectorWrapper .wrapperLeft{
+    width: 80px;
+    height:40px;
+    margin-right: 0px;
+    background: white;
+    padding: 3px 3px;
+    white-space: nowrap;
+    border-radius: 4px 0 0 0;
+    padding: 7px;
+}
+.selectorWrapper .wrapperRight{
+
+    justify-content:space-between;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 40px solid white;
+    margin-left: -10px;
+    z-index: -1;
+}
+.selectorWrapper .inactive:hover{
+    opacity: 0.8;
+}
+.selectorWrapper .inactive .wrapperLeft{
+    background: #e5dfdc;
+}
+.selectorWrapper .inactive .wrapperRight{
+    border-bottom: 40px solid #e5dfdc;
+}
+
+.globalHeader{
+    margin-left:20px;
+    margin-right: 20px;
+    margin-bottom: 15px;
+
+}
+
+
+.searchForm{
+    display: flex;
+    justify-content: space-between;
+}
+@media (min-width:500px){
+    .searchForm{
+        max-width: 500px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
+.searchForm  > input{
+    width: 100%;
+    margin-right: 0px;
+    height: 40px;
+    padding: 0 10px;
+    border: 1px solid #DDDDDD;
+    border-radius: 0 0 0 4px;
+}
+@media (min-width:500px){
+    .searchForm  > input{
+        font-size: 18px;
+        border-radius: 0 0 0 4px;
+        border: none;
+    }
+}
+
+.searchForm  > button{
+    white-space: nowrap;
+    padding: 0 20px;
+    background: #007DAA;
+    border-radius: 0 4px 4px 0;
+    border: none;
+    color: white;
+    font-size: 16px;
+}
+@media (min-width:500px){
+    .searchForm  > button >span{
+        display: none;
+    }
+}
+
+@media (min-width:500px){
+    .searchForm  > button{
+        background: white;
+        padding: 0 20;
+        border-radius: 0 4px 4px 0;
+        line-height:0;
+        cursor: pointer;
+    }
+}
+
+.searchForm  > button .icon{
+    display: none;
+}
+
+@media (min-width:500px){
+    .searchForm  > button .icon{
+        display: inline-block;
+        font-size: 30px;
+    }
+}
+.globalMain{
+    max-width: 715px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.siteList{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px;
+    justify-content: space-between;
+    cursor: default;
+}
+@media (min-width:500px){
+    .siteList{
+        margin-left: 0;
+        margin-right: -25px;
+        justify-content: flex-start;
+        
+    }
+}
+
+.siteList > li{
+    margin-bottom: 15px;
+    
+}
+@media (min-width:500px){
+    .siteList > li{
+        margin-right: 15px;
+    }
+}
+.siteList .site{
+    border: 1px solid #DDDDDD;
+    width: 160px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+    position: relative;
+    cursor: pointer;
+}
+.siteList .site > .logo{
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+}
+.siteList .site > .link{
+    margin-top: 5px;
+    font-size: 16px;
+}
+.siteList .site > .close{
+    position: absolute;
+    right: 10px;
+    top: 5px;
+}
+@media (min-width:500px){
+    .siteList .site > .close{
+        display: none;
+        cursor: default;
+    }
+    .siteList .site:hover > .close{
+        display: block;
+    }
+}
+
+.siteList .close > .icon{
+   font-size: 20px;
+}
+
+.siteList .addButton{
+    border: 1px solid #DDDDDD;
+    width: 160px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 20px;
+}
+.siteList .addButton .icon{
+    width: 80px;
+    height: 80px;
+}
+
+.siteList .addButton .text{
+    margin-top: 5px;
+    font-size: 16px;
+}
+
+.morePicture{
+    margin-right: 50px;
+}
+
+.globalFooter{
+    display: none;
+}
+
+@media (min-width:500px){
+    .globalFooter{
+        display: flex;
+        justify-content:flex-end;
+        font-size: 18px;
+        margin-top: 30px;
+        
+    }
+    .globalFooter .pictureList{
+        display: flex;
+        width: 180px;
+        position:fixed; 
+        bottom: 50px;
+    }
+    .globalFooter .pictureList > li{
+        display: flex;
+        border: 2px solid white;
+        height: 40px;
+        width: 40px;
+        border-radius: 50px;
+        margin-right: 15px;
+        
+        align-items: center;
+        justify-content: space-around;
+        
+    }
+    .globalFooter .pictureList > .previous{
+       
+    }
+
+    .globalFooter .pictureList .previous_pic{
+        
+        
+    }
+    .globalFooter .pictureList .next_pic{      
+        
+    }
+    .globalFooter .pictureList .more_pic .icon{
+        font-size: 40px;
+    }
+}
+.copyright{
+    display: none;
+}
+@media (min-width:500px){
+    .copyright{
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+        position:fixed; 
+        bottom: 0px;
+        width: 100%;
+        min-height: 2em;
+        background: rgb(51,51,51);
+        color: white;
+        font-size: 14px;
+        font-family:"Microsoft YaHei";
+        opacity: 0.9;
+        user-select: none;
+    }
+    .copyright .url{
+        display: flex;
+        align-items: center;
+        justify-content: center;        
+    }
+}
+
+
+/*# sourceMappingURL=style.cff3e041.css.map */
